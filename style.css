@@ -1,0 +1,104 @@
+html, body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #360c6d;
+  background: -moz-linear-gradient(45deg, #360c6d 1%, #5f14bd 100%);
+  background: -webkit-linear-gradient(45deg, #360c6d 1%,#5f14bd 100%);
+  background: linear-gradient(45deg, #360c6d 1%,#5f14bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#360c6d', endColorstr='#5f14bd',GradientType=1 );
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}
+p {
+  padding-bottom: .5rem;
+}
+a {
+  color: white;
+}
+
+@keyframes rotateAnimation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform-origin: center;
+  -webkit-transform-origin: center;
+  width: 25px;
+  height: 25px;
+  background: #228FF3;
+  z-index: 999;
+  animation-name: rotateAnimation;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.card {
+  transition: transform .3s, opacity .3s;
+  opacity: 0;
+  overflow: hidden;
+  width: 25rem;
+  height: 0;
+  transform: translate(-4rem, 2rem);
+  background: #228FF3;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  box-shadow: 4px 4px 1px rgba(0,0,0,0.5);
+}
+.content {
+  width: 86%;
+  height: 86%;
+}
+.content a {
+  word-break: break-all;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.card.loaded {
+  transform: translate(0,0);
+  opacity: 1;
+  height: 15rem;
+  margin: 1rem auto 1rem auto;
+  position: relative;
+}
+.card.loaded .content {
+  margin: 7%;
+}
+
+.score {
+  color: #228FF3;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: .5rem 0;
+  background: white;
+  text-align: center;
+  left: 0;
+  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  -o-border-bottom-right-radius: 2px;
+}
